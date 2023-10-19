@@ -15,7 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Jobs',
+        'jobs' => [
+            [
+                'id' => 1,
+                'title' => 'Listing One',
+                'description' => 'Lorem Ipsum'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing Two',
+                'description' => 'Lorem Ipsum'
+            ]
+        ]
+    ]);
 });
 
 /* Route::get('/hello', function(){
