@@ -31,6 +31,23 @@ Route::get('/listing/{id}', function ($id) {
     ]);
 });
 
+Route::get('/dbconn', function(){
+    return view('dbconn');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Route::get('/hello', function(){
     return response('<h1>Hello World</h1>',200)
     ->header('Content-Type', 'text/plain')
