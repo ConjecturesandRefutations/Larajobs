@@ -4,11 +4,15 @@
      <p>No listings found</p>
 @endif --}}
 
-@unless(count($jobs) == 0)
+@unless(count($listings ?? []) == 0)
 
-@foreach($jobs as $job)
-     <h2>{{$job['title']}}</h2>
-     <p>{{$job['description']}}</p>
+@foreach($listings as $listing)
+     <h2>
+          <a href="/listing/{{$listing['id']}}">{{$listing['title']}}
+     </h2></a>
+     <p>
+          {{$listing['description']}}
+     </p>
 @endforeach
 
 @else
