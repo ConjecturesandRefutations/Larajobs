@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
     {
          \App\Models\User::factory(10)->create();
 
-         Listing::create([
+        Listing::factory(6)->create();
+
+  /*        Listing::create([
             'title' => 'CEO',
             'tags' => 'laravel, javascript',
             'company' => 'AlfCo',
@@ -33,7 +35,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'bob@alfco.com',
             'website' => 'bob.com',
             'description' => 'lorem ipsum again'
-        ]);
+        ]); */
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
